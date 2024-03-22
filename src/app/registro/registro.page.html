@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="color: #fff;">Perfil del jugador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" id="main-content">
+  <div class="d-flex flex-column align-items-center justify-content-center mb-5">
+    <div class="mb-3" style="text-align: center;">
+      <img src="assets/picachu.png" alt="Mona" width="150" height="150" style="border-radius: 50%; display: inline-block;">
+    </div>
+
+    <div class="perfil-jugador">
+      <h1 style="color: #fff;">Tachidue</h1>
+      <h5 style="color: #fff;">Region: Norteamerica</h5>
+      <h5 style="color: #fff;">Pokemones atrapados: 6</h5>
+      <h5 style="color: #fff;">ID: 60000917</h5>
+    </div>
+  </div>
+</ion-content>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item class="mb-3 custom-button" lines="full" button routerLink="/home" style="--background: #4CAF50; --color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <ion-icon slot="start" name="apps-outline"></ion-icon>
+      <ion-label>Pokedex</ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #333; --color: #fff;">
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item class="vibrant-button transparent-button" lines="none" button routerLink="/home" style="--color: #fff;">Pokedex</ion-item>
+      <ion-item class="vibrant-button transparent-button" lines="none" button routerLink="/" style="--color: #fff;">Cerrar Sesion</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

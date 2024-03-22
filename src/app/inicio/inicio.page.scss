@@ -1,0 +1,71 @@
+// home.page.scss
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  
+    .card {
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+      .card-header {
+        text-align: center;
+        background-color: transparent;
+        padding: 1em 0; // Ajusta la propiedad de padding
+  
+        h3 {
+          margin-top: 0; // Elimina el margin-bottom para que el texto esté hasta arriba
+          font-size: 2em; // Tamaño de letra 30
+          color: yellow;
+        }
+  
+        img {
+          width: 200px;
+          margin-top: 1em; // Añade un margin-top para la imagen
+        }
+      }
+  
+      .card-body {
+        padding: 1em;
+  
+        form {
+          ion-item {
+            margin-bottom: 1em;
+  
+            ion-label {
+              font-weight: bold;
+              font-size: 1.5em; // Tamaño de letra 20
+              color: #495057;
+            }
+  
+            ion-input {
+              border: 1px solid #ced4da;
+              border-radius: 0.25em;
+              padding: 0.5em;
+            }
+  
+            ion-text {
+              font-size: 1.5em; // Tamaño de letra 20
+              color: #dc3545;
+              margin-top: 0.5em; // Espacio entre Correo y Contraseña
+            }
+          }
+  
+          ion-button {
+            margin-top: 1em;
+            border-radius: 10px;
+            font-size: 1.5em; // Tamaño de letra 20
+          }
+        }
+      }
+  
+      .card-footer {
+        text-align: center;
+        padding: 1em 0;
+      }
+    }
+  }
+  

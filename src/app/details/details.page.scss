@@ -1,0 +1,62 @@
+/* Estilo para el contenedor principal */
+.pokemon-detail-content {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo para la imagen del Pokémon */
+.pokemon-image {
+  width: 220px;
+  height: auto;
+  margin: 40px auto;
+  display: block;
+  border-radius: 100px 0px 100px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la lista dentro de .pokemon-detail-content */
+.pokemon-detail-content ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  column-count: 2;
+  font-family: Arial, sans-serif; /* Cambia la fuente según tus preferencias */
+  font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilo para los elementos de la lista dentro de .pokemon-detail-content */
+.pokemon-detail-content ul li {
+  margin-bottom: 10px;
+  font-weight: lighter; /* Hace que el texto sea más visible */
+}
+
+/* Estilo para el título en el encabezado */
+ion-header ion-title {
+  color: #ffffff; /* Cambia el color del título */
+}
+
+/* Estilo para los datos del Pokémon */
+.pokemon-data {
+  font-size: 20px; /* Tamaño de fuente aumentado */
+  margin-bottom: 10px; /* Espaciado inferior */
+  color: #000000; /* Color de texto */
+}
+
+.stats-box {
+  background-color: #f0f0f0; /* Color gris claro */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 15px; /* Espaciado inferior */
+  border: 2px solid #ffa3a3;
+}
+
+.pokemon-container {
+  display: flex;
+  border-radius: 100px 0px 100px 10px;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.pokemon-data {
+  margin-right: 20px; /* Ajusta el espacio entre los elementos si es necesario */
+}

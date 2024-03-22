@@ -1,0 +1,33 @@
+page-home {
+  ion-header {
+    ion-toolbar {
+      --background: black; // Cambiar color de fondo
+      --color: yellow; // Cambiar color de texto
+
+      ion-title {
+        font-size: 1.5rem; // Tamaño del texto del título
+        font-weight: bold; // Peso de la fuente del título
+      }
+    }
+  }
+
+  ion-content {
+    ion-card {
+      img {
+        width: 100%; // Ajustar el tamaño de la imagen al 100% del contenedor
+      }
+
+      ion-card-title {
+        font-size: 1rem; // Tamaño del texto del título de la tarjeta
+        font-weight: bold; // Peso de la fuente del título de la tarjeta
+        margin-top: 0.5rem; // Margen superior del título de la tarjeta
+      }
+
+      ion-button {
+        --padding-start: 0; // Eliminar el relleno izquierdo del botón
+        --padding-end: 0; // Eliminar el relleno derecho del botón
+        margin-top: 0.5rem; // Margen superior del botón
+      }
+    }
+  }
+}

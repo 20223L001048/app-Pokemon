@@ -1,0 +1,54 @@
+/* Estilos generales */
+ion-content {
+    --ion-background-color: #000; /* Fondo negro */
+    --ion-text-color: #fff; /* Letras blancas */
+  }
+  
+  /* Estilos para la imagen del perfil */
+  #main-content .d-flex {
+    text-align: center;
+  }
+  
+  #main-content img {
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  /* Estilos para la información del perfil */
+  .perfil-jugador {
+    text-align: center;
+    color: #fff; /* Letras blancas */
+  }
+  
+  .perfil-jugador h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .perfil-jugador h5 {
+    font-size: 1em;
+    margin-bottom: 0.3em;
+  }
+  
+  /* Estilos para los botones personalizados */
+  .custom-button {
+    --ion-background-color: #4CAF50; /* Color de fondo del botón personalizado */
+    --ion-color-base: #fff; /* Color del texto del botón personalizado */
+    font-weight: bold;
+  }
+  
+  /* Estilos para el menú lateral */
+  ion-menu {
+    --ion-background-color: #333; /* Color de fondo del menú lateral */
+  }
+  
+  .transparent-button {
+    --ion-text-color: #fff; /* Color del texto del botón transparente */
+  }
+  
+  /* Estilos para el encabezado */
+  ion-header {
+    --ion-background-color: #000; /* Fondo negro */
+    --ion-color-base: #fff; /* Color del texto del encabezado */
+  }
+  

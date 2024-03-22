@@ -1,0 +1,57 @@
+<!-- home.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="card shadow-lg">
+          <div class="card-header">
+            <h3 class="text-center">Pokemon Login</h3>
+            <div class="contenedorimagen">
+              <img src="assets/Pokeball.png" alt="Descripción de la imagen">
+            </div>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="login()">
+              <ion-item lines="full">
+                <ion-label position="stacked">Correo</ion-label>
+                <ion-input
+                  [(ngModel)]="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  (ionChange)="validateEmail()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!emailValid">Correo inválido</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-label position="stacked">Contraseña</ion-label>
+                <ion-input
+                  [(ngModel)]="password"
+                  name="password"
+                  type="password"
+                  placeholder="*"
+                  (ionChange)="validatePassword()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!passwordValid">Contraseña inválida</ion-text>
+              </ion-item>
+
+              <ion-button expand="full" type="submit" color="primary" class="ion-margin-top" [disabled]="!emailValid || !passwordValid || (!email && !password)">
+                Iniciar Sesión
+              </ion-button>
+            </form>
+          </div>
+          <div class="card-footer text-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

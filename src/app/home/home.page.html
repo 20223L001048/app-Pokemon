@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/menu"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Poke App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let pokemon of pokemons; let i = index">
+        <ion-card button (click)="showPokemon(i + 1)">
+          <ion-card-header>
+            <!-- Asegúrate de que pokemon.sprites está definido antes de intentar acceder a pokemon.sprites.front_default -->
+            <img *ngIf="pokemon.sprites" style="height: 150px;" [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}">
+            <ion-card-title class="centered-text">{{ pokemon.name }}</ion-card-title>
+            <ion-button fill="clear" (click)="likePokemon(i, $event)">
+              <ion-icon [name]="likes[i] ? 'heart' : 'heart-outline'" [color]="likes[i] ? 'danger' : 'medium'"></ion-icon>
+            </ion-button>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
