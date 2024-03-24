@@ -9,8 +9,12 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemon(){
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1025');
+  getPokemon(limit?: number){
+    let url = 'https://pokeapi.co/api/v2/pokemon';
+    if (limit) {
+      url += `?limit=${limit}`;
+    }
+    return this.http.get(url);
   }
 
   getPokemonDetails(id: number){
@@ -49,4 +53,5 @@ export class HttpService {
     // Guarda los favoritos actualizados en localStorage
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }
+
 }

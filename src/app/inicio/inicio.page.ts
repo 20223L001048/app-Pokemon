@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { LoginService } from '../services/login.service'; // Importa el servicio LoginService
+import { LoginService } from '../services/login.service'; 
 
 @Component({
   selector: 'app-inicio',
@@ -22,12 +22,12 @@ export class InicioPage {
   ) {}
 
   validateEmail() {
-    this.emailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email);
+    this.emailValid = /^20223l001048@utcv\.edu\.mx$/.test(this.email);
   }
 
   validatePassword() {
-    this.passwordValid = /^(?=.*[A-Z]).{8,}$/.test(this.password);
-  }
+    this.passwordValid = /^[a-zA-Z0-9]+$/.test(this.password);
+}
 
   async login(registering: boolean = false) {
     // Verifica si tanto el correo como la contraseña no están vacíos

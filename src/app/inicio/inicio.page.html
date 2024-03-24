@@ -1,52 +1,57 @@
-<!-- home.page.html -->
 <ion-header>
   <ion-toolbar>
-    <ion-title>Pokemon</ion-title>
+    <ion-title>Pokemon Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" style="background-color: #ADD8E6;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8">
         <div class="card shadow-lg">
           <div class="card-header">
-            <h3 class="text-center">Pokemon Login</h3>
-            <div class="contenedorimagen">
-              <img src="assets/Pokeball.png" alt="Descripción de la imagen">
+            <h3 class="text-center">Iniciar Sesión</h3>
+            <div class="pokebola text-center" style="margin-bottom: 20px;">
+              <img src="https://cdn-icons-png.flaticon.com/128/287/287221.png" alt="Pokebola">
             </div>
           </div>
           <div class="card-body">
             <form (ngSubmit)="login()">
-              <ion-item lines="full">
-                <ion-label position="stacked">Correo</ion-label>
+              <ion-item lines="full" class="vibrant-input" style="margin-bottom: 20px;">
+                <ion-label position="stacked" style="color: #fff; font-size: 1.5rem; margin-bottom: 8px;">Correo</ion-label>
                 <ion-input
                   [(ngModel)]="email"
                   name="email"
                   type="email"
-                  placeholder="name@example.com"
-                  (ionChange)="validateEmail()"
+                  placeholder="Correo electrónico"
+                  style="color: #fff;"
                   required
                 ></ion-input>
-                <ion-text color="danger" *ngIf="!emailValid">Correo inválido</ion-text>
               </ion-item>
 
-              <ion-item lines="full">
-                <ion-label position="stacked">Contraseña</ion-label>
+              <ion-item lines="full" class="vibrant-input" style="margin-bottom: 20px;">
+                <ion-label position="stacked" style="color: #fff; font-size: 1.5rem; margin-bottom: 8px;">Contraseña</ion-label>
                 <ion-input
                   [(ngModel)]="password"
                   name="password"
                   type="password"
-                  placeholder="*"
-                  (ionChange)="validatePassword()"
+                  placeholder="Contraseña"
+                  style="color: #fff;"
                   required
                 ></ion-input>
-                <ion-text color="danger" *ngIf="!passwordValid">Contraseña inválida</ion-text>
               </ion-item>
 
-              <ion-button expand="full" type="submit" color="primary" class="ion-margin-top" [disabled]="!emailValid || !passwordValid || (!email && !password)">
-                Iniciar Sesión
-              </ion-button>
+              <ion-button expand="block" color="danger" class="vibrant-button mb-2">Iniciar Sesión</ion-button>
+
+              <div class="row justify-content-between mb-2">
+                <ion-button color="light" fill="outline" class="vibrant-button col-5 mr-1" style="background-color: #87CEFA; color: #fff;">Twitter</ion-button>
+                <ion-button color="light" fill="outline" class="vibrant-button col-5 ml-1" style="background-color: #4682B4; color: #fff;">Facebook</ion-button>
+              </div>
+
+              <div class="row justify-content-between color:#000000 ">
+                <ion-button color="#000000" fill="clear">Olvidé mi contraseña</ion-button>
+                <ion-button color="#000000" fill="clear">Crear una cuenta</ion-button>
+              </div>
             </form>
           </div>
           <div class="card-footer text-center"></div>
